@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Chelsea Market' rel='stylesheet")
+/*@import url("https://fonts.googleapis.com/css?family=Chelsea Market' rel='stylesheet")*/
 
 * {
 	box-sizing: border-box;
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-	font-family: "Chelsea Market";
+	font-family: "Didact Gothic";
 	font-size: 1.2rem;
 	min-height: 100%;
 }
@@ -21,30 +21,31 @@ body {
 	border-radius: 4px;
 	padding: 10px;
 	text-align: center;
+
 }
 
-.header {
-	grid-area: header;
+header {
+	grid-area: H;
 	background-color: #194350;
 }
 
-.navbar {
-	grid-area: navbar;
+nav {
+	grid-area: N;
 	background-color: #ff8882;
 }
 
-.sidebar {
-	grid-area: sidebar;
+aside {
+	grid-area: S;
 	background-color: #ffc2b4;
 }
 
-.main {
-	grid-area: main;
+section {
+	grid-area: M;
 	background-color: #9dbeb9;
 }
 
-.footer {
-	grid-area: footer;
+footer {
+	grid-area: F;
 	background-color: #fed049;
 }
 
@@ -52,11 +53,11 @@ body {
 	display: grid;
 	grid-gap: 10px;
 	grid-template: 
-	"header" 100px
-	"navbar" 50px
-	"main"   auto
-	"sidebar"100px	
-	"footer" 100px;
+	"H" 100px
+	"N" 50px
+	"M"   auto
+	"S"100px	
+	"F" 100px;
 
 }
 
@@ -70,10 +71,10 @@ body {
 		"sidebar main" 
 		"footer footer"*/
 	grid-template:
-		"header header" 100px
-		"navbar navbar" 50px
-		"sidebar main"  auto
-		"footer footer" 100px /
+		"H H" 100px
+		"N N" 50px
+		"S M"  auto
+		"F F" 100px /
 		200px	auto;
 	}
 }
@@ -81,8 +82,8 @@ body {
 @media (min-width: 900px) {
 	.grid-container {
 	grid-template:
-		"header header header" 100px
-		"navbar main sidebar"  auto
-		"footer footer footer" 100px /
+		"H H H" 100px
+		"N M S"  auto
+		"F F F" 100px /
 		200px	auto	200px;
 	}
